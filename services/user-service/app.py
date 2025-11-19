@@ -23,6 +23,10 @@ def parse_token(token: str):
     except Exception:
         return None
 
+@app.get("/omer-login")
+def omer_login():
+    return jsonify({"message": "Hello Omer"})
+
 @app.get("/healthz")
 def healthz():
     return jsonify({"status": "ok", "service": "user-service", "env": ENVIRONMENT})
